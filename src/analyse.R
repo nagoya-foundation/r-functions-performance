@@ -1,20 +1,23 @@
 library(microbenchmark)
 
 # Get data
-r <- read.csv(paste0(getwd(), "/data/Airplane_Crashes_and_Fatalities_Since_1908.csv"))
+r <- read.csv(paste0(getwd(), "/data/Airplane_Crashes_and_Fatalities_Since_1908.csv"), stringsAsFactors = F)
 
 # Convert microbenchmark to markdown sintax
 to_markdown <- function(mb) {
 	mb <- summary(mb)
 	
+	# Add milliseconds column
+	mb$unit <- "ms"
+	
 	# Change column names
-	names(mb) <- c("function", "min", "lq", "avg", "median", "uq", "max", "times")
+	names(mb) <- c("function", "min", "lq", "avg", "median", "uq", "max", "times", "unit")
 	
 	# Reorder columns
-	mb <- mb[, c(1, 8, 3, 6, 2, 7, 5, 4)]
+	mb <- mb[, c(1, 8, 9, 3, 6, 2, 7, 5, 4)]
 	
 	# Round numbers
-	mb[3:8] <- round(mb[3:8], 3)
+	mb[4:9] <- round(mb[4:9], 3)
 	
 	# Create table header
 	table_header <- paste(names(mb), collapse = " | ")
@@ -37,5 +40,5 @@ mb <- microbenchmark(
 	unit = "ms"
 )
 
-# print markdown table
+# Print markdown table
 to_markdown(mb)
