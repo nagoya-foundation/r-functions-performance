@@ -1,4 +1,4 @@
-# r-sintax-performance
+# r-functions-performance
 
 This repo was created with the purpose of studying performance of different functions that can be used to obtain the same result.
 
@@ -18,4 +18,4 @@ toString | 1000 | 2.781 | 2.944 | 2.725 | 10.801 | 2.827 | 2.972
 
 ## License
 
-r-sintax-performance is [MIT Licensed](LICENSE).
+r-functions-performance is [MIT Licensed](LICENSE).
