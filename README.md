@@ -4,9 +4,11 @@ This repo was created with the purpose of studying performance of different func
 
 ## How it works
 
-We are using "Airplane Crashes and Fatalities Since 1908" public dataset provided by [Open Data by Socrata](https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq) to make funcitons calls.
+We are using "Airplane Crashes and Fatalities Since 1908" public dataset provided by [Open Data by Socrata](https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq).
 
 ## Example
+
+### to string functions
 
 function | times | lq | uq | min | max | median | avg
 --- | --- | --- | --- | --- | --- | --- | ---
