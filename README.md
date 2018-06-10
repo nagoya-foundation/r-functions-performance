@@ -2,6 +2,15 @@
 
 This repo was created with the purpose of studying performance of different functions that can be used to obtain the same result.
 
+## Requirements
+
+- R (> 3.2);
+- microbenchmark R package.
+
+### Instructions
+
+To install R in your system check its [official site](https://www.r-project.org/), R is available in a number of platforms. Then start R and type `install.packages('microbenchmark')` and select a mirror.
+
 ## How it works
 
 We are using "Airplane Crashes and Fatalities Since 1908" public dataset provided by [Open Data by Socrata](https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq) with 5268 observations and 13 columns to test some functions.
