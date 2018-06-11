@@ -8,16 +8,11 @@ This repo was created with the purpose of studying performance of different func
   * [to string functions](#to-string-functions)
 * [winners](#winners)
 
-## Requirements
-
-- R (> 3.2);
-- [microbenchmark R package](https://github.com/joshuaulrich/microbenchmark/).
-
 ## How it works
 
 We are using "Airplane Crashes and Fatalities Since 1908" public dataset provided by [Open Data by Socrata](https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq) with 5268 observations and 13 columns to test some functions.
 
-We run the selected function 1000 times over one column and use `summary()` to analyse the difference in milliseconds between the functions.
+We run the selected function 1000 times over one column using [microbenchmark R package](https://github.com/joshuaulrich/microbenchmark/) and use `summary()` to analyse the difference in milliseconds between the functions.
 
 ## Performance Result
 
