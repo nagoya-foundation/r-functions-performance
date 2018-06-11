@@ -32,9 +32,9 @@ sprintf | 1000 | ms | 2.900 | 3.015 | 2.866 |  7.407 | 2.936 | 3.045
 
 ## Winners
 
-Porpose | Winner | Second Best
+purpose | winner | avg time
 --- | --- | ---
-to string | as.character | paste
+convert to string | as.character | 2.009 ms
 
 ## License
 
