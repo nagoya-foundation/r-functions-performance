@@ -5,7 +5,7 @@ This repo was created with the purpose of studying performance of different func
 ## Table of content
 * [How it Works](#how-it-works)
 * [Performance Result](#performance-result)
-* [to string Functions](#to-string-functions)
+  * [to string](#to-string-functions)
 * [Winners](#winners)
 
 ## How it Works
