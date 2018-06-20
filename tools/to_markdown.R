@@ -1,7 +1,3 @@
-# --------------------------------------------------------------------------- #
-# Auxiliary file containing function definitions to use in the main files.
-# --------------------------------------------------------------------------- #
-
 # Convert microbenchmark to markdown sintax
 to_markdown <- function(mb) {
 	mb <- summary(mb)
@@ -27,7 +23,8 @@ to_markdown <- function(mb) {
 	
 	# Create table body
 	table_body <- apply(mb, 1, paste, collapse = " | ")
+	table_body <- paste(table_body, collapse = "\n")
 	
-	cat(table_header, table_sep, table_body, sep = "\n")
+	# Return
+	return(paste(table_header, table_sep, table_body, sep = "\n"))
 }
-
