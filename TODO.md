@@ -1,2 +1,2 @@
-[ ] Compare map functions, like Xapply, Map
-[X] Compare stringfying functions like paste, toString, as.character
+- [ ] Compare map functions, like Xapply, Map
+- [x] Compare stringfying functions like paste, toString, as.character
