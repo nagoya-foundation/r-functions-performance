@@ -4,6 +4,7 @@ mb <- microbenchmark(
 	paste = paste(r$Fatalities),
 	toString = toString(r$Fatalities),
 	sprintf = sprintf("%s", r$Fatalities),
+	formatC = formatC(r$Fatalities),
 	times = 10L,
 	unit = "ms"
 )
