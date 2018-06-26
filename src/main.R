@@ -1,3 +1,12 @@
+#! /usr/bin/Rscript
+
+# --------------------------------------------------------------------------- #
+# Main function of the project, here we run all benchmarks and export the res -
+# ults to the readme file.
+#
+# Copyright (c) 2018 Nagoya Foundation
+# --------------------------------------------------------------------------- #
+
 library(microbenchmark)
 source("./tools/to_markdown.R")
 
@@ -7,6 +16,7 @@ r <- read.csv(
 	stringsAsFactors = F
 )
 
+# Call functions to analyze and print it to markdown
+source("./src/analysis_to_string.R")
+source("./src/analysis_select_dplyr.R")
 
-# Call functions to analyse and print it to markdown
-source("./src/analyse_to_string.R")
