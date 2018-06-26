@@ -8,4 +8,4 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-cat("### subsect functions", "", to_markdown(mb), "", sep = "\n")
+cat("### subset functions", "", to_markdown(mb), "", sep = "\n")
