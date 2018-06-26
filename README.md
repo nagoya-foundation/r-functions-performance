@@ -17,7 +17,7 @@ We run the selected function 1000 times over one column using [microbenchmark R 
 
 ## Performance Result
 
-### subsect functions
+### subset functions
 
 function | times | unit | lq | uq | min | max | median | avg
 --- | --- | --- | --- | --- | --- | --- | --- | ---
