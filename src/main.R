@@ -8,6 +8,7 @@
 # --------------------------------------------------------------------------- #
 
 library(microbenchmark)
+library(dplyr)
 source("./tools/to_markdown.R")
 
 # Get data
@@ -17,6 +18,6 @@ r <- read.csv(
 )
 
 # Call functions to analyze and print it to markdown
+source("./src/analysis_subset.R")
 source("./src/analysis_to_string.R")
-source("./src/analysis_select_dplyr.R")
 

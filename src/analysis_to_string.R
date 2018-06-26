@@ -1,11 +1,11 @@
 # Mircrobenchmark
 mb <- microbenchmark(
 	as.character = as.character(r$Fatalities),
+	formatC = formatC(r$Fatalities),
 	paste = paste(r$Fatalities),
 	toString = toString(r$Fatalities),
 	sprintf = sprintf("%s", r$Fatalities),
-	formatC = formatC(r$Fatalities),
-	times = 10L,
+	times = 1000L,
 	unit = "ms"
 )
 
