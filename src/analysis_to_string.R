@@ -10,4 +10,4 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-cat("### to string functions", "", to_markdown(mb), "", sep = "\n")
+paste("### to string functions", "", to_markdown(mb), sep = "\n")

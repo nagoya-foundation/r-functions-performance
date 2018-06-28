@@ -10,7 +10,6 @@
 library(microbenchmark)
 library(dplyr)
 source("./utils/to_markdown.R")
-source("./utils/write_readme.R")
 
 # Get data
 r <- read.csv(
@@ -18,7 +17,40 @@ r <- read.csv(
 	stringsAsFactors = F
 )
 
-# Call functions to analyze and print it to markdown
-source("./src/analysis_subset.R")
-source("./src/analysis_to_string.R")
+# Call analysed functions and append to results vector
+analysed_results <- "" %>%
+	append(source("./src/analysis_subset.R")$value) %>%
+	append(source("./src/analysis_to_string.R")$value) %>%
+	append("")
 
+# Open readme read + write
+f <- file("./README.md", "r+")
+
+# Read all lines
+readme <- readLines(f)
+
+# Store new performance result in result variable 
+result <- ""
+flag <- 0
+for (line in readme) {
+	if(flag == 0 || line == "## License") {
+		
+		flag <- 0
+		result <- append(result, line)
+		
+		# Arived performance section
+		if(line == "## Performance Result") {
+			result <- append(result, analysed_results)
+			flag <- 1
+		}
+	}
+}
+
+# Remove "" from result
+result <- result[-1]
+
+# Write new readme
+write(result, f)
+
+# Close Connection 
+close(f)
