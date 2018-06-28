@@ -29,8 +29,8 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-cat("### cluster_name", "", to_markdown(mb), "", sep = "\n")
+paste("### cluster_name", "", to_markdown(mb), sep = "\n")
 ```
 
-After that, add `source("./src/analysis_cluster_name.R")` in [main.R](src/main.R#L20) following file name alphabetical order. Running `main.R` will provide you all analysed tables to fill [README](README.md).
+After that, add `append(source("./src/analysis_cluster_name.R")$value) %>%` in [main.R](src/main.R) following file name alphabetical order. Then, run `main.R` to update [README](README.md).
 
