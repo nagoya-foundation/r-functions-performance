@@ -2,13 +2,6 @@
 
 This repo was created with the purpose of studying performance of different functions that can be used to obtain the same result.
 
-## Table of content
-* [How it Works](#how-it-works)
-* [Performance Result](#performance-result)
-  * [subset](#subset-functions)
-  * [to string](#to-string-functions)
-* [Winners](#winners)
-
 ## How it Works
 
 We are using "Airplane Crashes and Fatalities Since 1908" public dataset provided by [Open Data by Socrata](https://opendata.socrata.com/Government/Airplane-Crashes-and-Fatalities-Since-1908/q2te-8cvq) with 5268 observations and 13 columns to test some functions.
@@ -21,26 +14,18 @@ We run the selected function 1000 times over one column using [microbenchmark R 
 
 function | times | unit | lq | uq | min | max | median | avg
 --- | --- | --- | --- | --- | --- | --- | --- | ---
-base1 | 1000 | ms | 0.033 | 0.082 | 0.030 |  0.148 | 0.036 | 0.052
-base2 | 1000 | ms | 0.033 | 0.082 | 0.030 |  0.214 | 0.036 | 0.052
-select | 1000 | ms | 7.286 | 7.910 | 6.987 | 22.259 | 7.487 | 8.003
-
+base1 | 1000 | ms | 0.033 | 0.082 | 0.030 |   6.090 | 0.037 | 0.065
+base2 | 1000 | ms | 0.034 | 0.083 | 0.030 |   0.180 | 0.037 | 0.052
+select | 1000 | ms | 7.177 | 8.221 | 6.945 | 267.666 | 7.425 | 8.415
 ### to string functions
 
 function | times | unit | lq | uq | min | max | median | avg
 --- | --- | --- | --- | --- | --- | --- | --- | ---
-as.character | 1000 | ms | 1.882 | 1.959 | 1.844 |   6.781 | 1.912 | 1.963
-formatC | 1000 | ms | 1.983 | 2.108 | 1.904 | 100.387 | 2.033 | 2.286
-paste | 1000 | ms | 2.534 | 2.625 | 2.500 |   7.157 | 2.569 | 2.622
-toString | 1000 | ms | 2.797 | 2.904 | 2.711 |   7.641 | 2.836 | 2.891
-sprintf | 1000 | ms | 2.957 | 3.060 | 2.916 |   7.285 | 2.998 | 3.047
-
-## Winners
-
-purpose | winner | avg time
---- | --- | ---
-subset | data[col_number] | 0.052 ms
-convert to string | as.character | 0.014 ms
+as.character | 1000 | ms | 1.854 | 1.926 | 1.839 | 13.172 | 1.881 | 1.975
+formatC | 1000 | ms | 1.997 | 2.109 | 1.942 | 13.562 | 2.035 | 2.214
+paste | 1000 | ms | 2.493 | 2.589 | 2.464 |  8.950 | 2.533 | 2.626
+toString | 1000 | ms | 2.741 | 2.839 | 2.700 | 10.301 | 2.784 | 2.895
+sprintf | 1000 | ms | 2.938 | 3.035 | 2.906 | 10.553 | 2.981 | 3.057
 
 ## License
 
