@@ -10,9 +10,12 @@ Everyone participating in this project is governed by our [code of conduct](CODE
 
 We are open to any kind of contribution, so feel free to develop with us.
 
-if you want to help finding functions that have the same output when used the same input, there are two ways to help. Creating a issue with the related function cluster or doing a pull request with your cluster suggestion. Both ways are very helpfull, if you decide to write some code, the rest of this section is here to help you to do it.
+If you want to help finding functions that have the same output when used the same input, there are two ways to help. Creating a issue with the related function cluster or doing a pull request with your cluster suggestion. Both ways are very helpfull, if you decide to write some code, the rest of this section is here to help you to do it.
 
-First of all, open our project `r-functions-performance.Rproj` in RStudio, this will help you to follow our code guides.
+To contribute to this project just keep reading:
+
+- [Fork](https://github.com/nagoya-foundation/r-functions-performance/fork) it;
+- Open our project `r-functions-performance.Rproj` in RStudio, this will help you to follow our code guides.
 
 Our `src folder` contains a `main.R`and all analysed functions and we need a lot of help to maintain it. If you are adding a new cluster of function, create a file `analysis_cluster_name.R` like the others and use the following code as example.
 
@@ -34,3 +37,7 @@ paste("### cluster_name", "", to_markdown(mb), sep = "\n")
 
 After that, add `append(source("./src/analysis_cluster_name.R")$value) %>%` in [main.R](src/main.R) following file name alphabetical order. Then, run `main.R` to update [README](README.md).
 
+- Pull your code to the forked repository, then go to your main GitHub page, a message will be there advising you to merge your changes, click on the link
+- Explain whats has changed, just to make things easier
+
+And that's is. Thanks for contributing to this project.
