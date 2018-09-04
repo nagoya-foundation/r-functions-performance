@@ -10,6 +10,7 @@
 library(microbenchmark)
 library(dplyr)
 source("./utils/to_markdown.R")
+library(purrr)
 
 # Get data
 r <- read.csv(
@@ -21,6 +22,7 @@ r <- read.csv(
 analysed_results <- "" %>%
 	append(source("./src/analysis_subset.R")$value) %>%
 	append(source("./src/analysis_to_string.R")$value) %>%
+	append(source("./src/analysis_mapping.R")$value) %>%
 	append("")
 
 # Open readme read + write
