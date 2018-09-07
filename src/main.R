@@ -9,8 +9,8 @@
 
 library(microbenchmark)
 library(dplyr)
-source("./utils/to_markdown.R")
 library(purrr)
+source("./utils/to_markdown.R")
 
 # Get data
 r <- read.csv(
