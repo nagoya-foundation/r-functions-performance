@@ -14,7 +14,7 @@ source("./utils/to_markdown.R")
 
 # Get data
 r <- read.csv(
-	"./data/Airplane_Crashes_and_Fatalities_Since_1908.csv",
+	"./data/Melbourne_housing_FULL.csv",
 	stringsAsFactors = F
 )
 
