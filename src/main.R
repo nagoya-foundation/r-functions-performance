@@ -10,6 +10,7 @@
 library(microbenchmark)
 library(dplyr)
 library(purrr)
+library(lubridate)
 source("./utils/to_markdown.R")
 
 # Get data
