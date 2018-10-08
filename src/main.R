@@ -24,6 +24,7 @@ analysed_results <- "" %>%
 	append(source("./src/analysis_subset.R")$value) %>%
 	append(source("./src/analysis_to_string.R")$value) %>%
 	append(source("./src/analysis_mapping.R")$value) %>%
+	append(source("./src/analysis_to_date.R")$value) %>%
 	append("")
 
 # Open readme read + write
@@ -41,7 +42,7 @@ for (line in readme) {
 		flag <- 0
 		result <- append(result, line)
 		
-		# Arived performance section
+		# Arrived performance section
 		if(line == "## Performance Result") {
 			result <- append(result, analysed_results)
 			flag <- 1
