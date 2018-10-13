@@ -1,6 +1,6 @@
 # Mircrobenchmark
 mb <- microbenchmark(
-	base1 = r[11],
+	base1 = r[5],
 	base2 = r['Price'],
 	select = select(r, Price),
 	times = 1000L,
