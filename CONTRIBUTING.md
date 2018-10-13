@@ -20,6 +20,8 @@ To contribute to this project just keep reading:
 Our `src folder` contains a `main.R`and all analysed functions and we need a lot of help to maintain it. If you are adding a new cluster of function, create a file `analysis_cluster_name.R` like the others and use the following code as example.
 
 ```R
+description <- "give a simple description of what the functions do"
+
 # Mircrobenchmark
 mb <- microbenchmark(
 	as.character = as.character(r$Fatalities),
@@ -32,7 +34,7 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### cluster_name", "", to_markdown(mb), sep = "\n")
+paste("\n### cluster_name\n", description, "", to_markdown(mb), sep = "\n")
 ```
 
 After that, add `append(source("./src/analysis_cluster_name.R")$value) %>%` in [main.R](src/main.R) following file name alphabetical order. Then, run `main.R` to update [README](README.md).

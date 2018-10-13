@@ -1,3 +1,5 @@
+description <- "Convert column to date format"
+
 # Mircrobenchmark
 mb <- microbenchmark(
 	lubridate = dmy(r$Date),
@@ -8,5 +10,5 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### to date functions", "", to_markdown(mb), sep = "\n")
+paste("\n### to date functions\n", description, "", to_markdown(mb), sep = "\n")
 

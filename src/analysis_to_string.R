@@ -1,3 +1,5 @@
+description <- "Convert column as character"
+
 # Mircrobenchmark
 mb <- microbenchmark(
 	as.character = as.character(r$Price),
@@ -10,4 +12,4 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### to string functions", "", to_markdown(mb), sep = "\n")
+paste("\n### to string functions\n", description, "", to_markdown(mb), sep = "\n")

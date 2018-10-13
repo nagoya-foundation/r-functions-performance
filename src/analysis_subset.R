@@ -1,3 +1,5 @@
+description <- "Subset column in dataframe"
+
 # Mircrobenchmark
 mb <- microbenchmark(
 	base1 = r[5],
@@ -8,4 +10,4 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### subset functions", "", to_markdown(mb), sep = "\n")
+paste("\n### subset functions\n", description, "", to_markdown(mb), sep = "\n")

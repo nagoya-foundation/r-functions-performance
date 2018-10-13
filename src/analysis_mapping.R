@@ -1,3 +1,5 @@
+description <- "Apply a specific function to a list or vector."
+
 # Mircrobenchmark
 mb <- microbenchmark(
 	lapply = lapply(r$CouncilArea, as.character),
@@ -9,4 +11,4 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### mapping functions", "", to_markdown(mb), sep = "\n")
+paste("\n### mapping functions\n", description, "", to_markdown(mb), sep = "\n")
