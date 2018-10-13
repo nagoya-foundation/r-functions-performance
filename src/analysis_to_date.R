@@ -8,5 +8,5 @@ mb <- microbenchmark(
 )
 
 # Print markdown table
-paste("### to_date functions", "", to_markdown(mb), sep = "\n")
+paste("### to date functions", "", to_markdown(mb), sep = "\n")
 
