@@ -11,6 +11,7 @@ library(microbenchmark)
 library(dplyr)
 library(purrr)
 library(lubridate)
+library(sqldf)
 source("./utils/to_markdown.R")
 
 # Get data
@@ -25,6 +26,7 @@ analysed_results <- "" %>%
 	append(source("./src/analysis_to_string.R")$value) %>%
 	append(source("./src/analysis_mapping.R")$value) %>%
 	append(source("./src/analysis_to_date.R")$value) %>%
+	append(source("./src/analysis_simple_pattern_matching.R")$value) %>%
 	append("")
 
 # Open readme read + write
