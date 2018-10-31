@@ -67,4 +67,3 @@ sqldf | 1000 | ms | 206.089 | 215.534 | 197.608 | 351.085 | 209.091 | 211.285
 ## License
 
 r-functions-performance is [MIT Licensed](LICENSE).
-censed](LICENSE).
