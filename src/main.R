@@ -12,6 +12,7 @@ library(dplyr)
 library(purrr)
 library(lubridate)
 library(sqldf)
+library(rio)
 source("./utils/to_markdown.R")
 
 # Get data
@@ -22,11 +23,12 @@ r <- read.csv(
 
 # Call analysed functions and append to results vector
 analysed_results <- "" %>%
-	append(source("./src/analysis_subset.R")$value) %>%
-	append(source("./src/analysis_to_string.R")$value) %>%
+	append(source("./src/analysis_load_csv.R")$value) %>%
 	append(source("./src/analysis_mapping.R")$value) %>%
-	append(source("./src/analysis_to_date.R")$value) %>%
 	append(source("./src/analysis_simple_pattern_matching.R")$value) %>%
+	append(source("./src/analysis_subset.R")$value) %>%
+	append(source("./src/analysis_to_date.R")$value) %>%
+	append(source("./src/analysis_to_string.R")$value) %>%
 	append("")
 
 # Open readme read + write
