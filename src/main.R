@@ -6,13 +6,15 @@
 #
 # Copyright (c) 2018 Nagoya Foundation
 # --------------------------------------------------------------------------- #
-
+install.packages(c('microbenchmark','dplyr','purrr','lubridate','sqldf','rio','data.table','readr'))
 library(microbenchmark)
 library(dplyr)
 library(purrr)
 library(lubridate)
 library(sqldf)
 library(rio)
+library(data.table)#To be able execute fread()command
+library(readr)#To be able execute read_csv()command
 source("./utils/to_markdown.R")
 
 # Get data
